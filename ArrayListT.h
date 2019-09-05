@@ -169,7 +169,16 @@ ArrayList<elemType>& ArrayList<elemType>::operator =(const ArrayList<elemType>& 
 
 template<class elemType>
 void ArrayList<elemType>::insertionSort() {
-	//TODO: Implement insertion sort here
+	    int i; 
+    for (int x = 1; x < size; x++){  
+        elemType k = myList[x];  
+        int j = x - 1;
+        while (j >= 0 && myList[j] > k){  
+            myList[j + 1] = myList[j];  
+            j = j - 1;  
+        }  
+        myList[j + 1] = k;  
+    }   
 }
 
 //This function is O(1)
